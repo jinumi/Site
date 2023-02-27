@@ -1,8 +1,6 @@
-import 'style.css';
-import * as THREE from 'three';
+import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 
 // Setup
-
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -20,7 +18,7 @@ renderer.render(scene, camera);
 // Torus
 
 const geometry = new THREE.TorusGeometry(15, 4, 8, 25);
-const material = new THREE.MeshBasicMaterial({ color: 0x12ffff , wireframe:true});
+const material = new THREE.MeshBasicMaterial({ color: 0x12ffff, wireframe: true });
 const torus = new THREE.Mesh(geometry, material);
 
 scene.add(torus);
